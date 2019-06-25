@@ -4,5 +4,10 @@
     "classifications": [ "Test/NUnit" ],
     "identity": "Zericco.UnitTestTemplate.CSharp",
     "name": "Zericco Unit Test Class Library",
-    "shortName": "zericcoutlib"
+    "shortName": "zericcoutlib",
+    "sourceName": "z-project",
+    "tags": {
+        "language": "C#",
+        "type": "project"
+    },
   }

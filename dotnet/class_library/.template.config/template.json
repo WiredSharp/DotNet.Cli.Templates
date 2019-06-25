@@ -6,20 +6,9 @@
     "name": "Zericco Class Library",
     "shortName": "zericcolib",
     "sourceName": "z-project",
+    "preferNameDirectory":true,
     "tags": {
         "language": "C#",
         "type": "project"
-    },
-    "symbols": {
-        "copyrightName": {
-            "type": "parameter",
-            "defaultValue": "John Smith",
-            "replaces": "Contoso"
-        },
-        "title": {
-            "type": "parameter",
-            "defaultValue": "Hello World from dotnet new",
-            "replaces": "Hello World"
-        }
     }
 }

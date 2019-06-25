@@ -14,8 +14,3 @@ $version = "${Major}.${Minor}.${Patch}"
 
 dotnet pack -c $Configuration --version-suffix $version
 dotnet new -i "bin\${Configuration}\Zericco.Templates.${version}.nupkg"
-New-Item "test_project" -ItemType Directory
-Push-Location
-Set-Location "test_project"
-dotnet new "zericcosol"
-Pop-Location
