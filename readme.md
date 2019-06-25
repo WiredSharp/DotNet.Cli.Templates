@@ -1,4 +1,6 @@
-# These templates create a simple solution with two projects
+# DotNet new templates 
+
+These templates create a simple solution with two projects
 
 one core library and one test project. Regular projects are stored in a *src* subfolder, test projects are stored in *test* subfolder.
 The following parameters are available:
