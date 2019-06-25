@@ -1,13 +1,13 @@
 # These templates create a simple solution with two projects
 
-one core library and one test project. Regular projects are stored in a 'src' subfolder, test projects are stored in 'test' subfolder.
+one core library and one test project. Regular projects are stored in a *src* subfolder, test projects are stored in *test* subfolder.
 The following parameters are available:
 
-- *Author*: generated package author
-- *Company*: assembly company
-- *ArtifactFolder*: define root folder for output path
-- *IntermediateFolder*: define base folder for intermediate folder path
-- *TargetFrameworkOverride*: define Target framework, default is .Net Core 2.2
+- **Author**: generated package author
+- **Company**: assembly company
+- **ArtifactFolder**: define root folder for output path
+- **IntermediateFolder**: define base folder for intermediate folder path
+- **TargetFrameworkOverride**: define Target framework, default is .Net Core 2.2
 
 # TODO
 
