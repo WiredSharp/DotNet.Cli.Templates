@@ -1,14 +1,85 @@
 {
     "$schema": "http://json.schemastore.org/template",
-    "author": "zericco",
+    "author": "WiredSharp",
     "classifications": ["Solution"],
-    "identity": "Zericco.SolutionPackTemplate.CSharp",
-    "name": "Zericco Solution pack",
-    "shortName": "zericcosol",
+    "identity": "WiredSharp.SolutionPackTemplate",
+    "name": "WiredSharp Solution pack",
+    "shortName": "wiredsln",
     "sourceName": "z-project",
     "preferNameDirectory": true,
     "tags": {
-        "language": "C#",
         "type": "project"
-    }
+    },
+    "postActions": [{
+            "description": "create project skeleton",
+            "manualInstructions": [{
+                "text": "Run 'dotnet new wiredprj'"
+            }],
+            "actionId": "3A7C4B45-1F5D-4A30-959A-51B88E82B5D2",
+            "args": {
+                "executable": "dotnet",
+                "args": "new wiredprj --force"
+            },
+            "continueOnError": false
+        },
+        {
+            "description": "create Class lib",
+            "manualInstructions": [{
+                "text": "Run 'dotnet new wiredclasslib'"
+            }],
+            "actionId": "3A7C4B45-1F5D-4A30-959A-51B88E82B5D2",
+            "args": {
+                "executable": "dotnet",
+                "args": "new wiredclasslib --force"
+            },
+            "continueOnError": false
+        },
+        {
+            "description": "create Unit Test Project",
+            "manualInstructions": [{
+                "text": "Run 'dotnet new wiredtest'"
+            }],
+            "actionId": "3A7C4B45-1F5D-4A30-959A-51B88E82B5D2",
+            "args": {
+                "executable": "dotnet",
+                "args": "new wiredtestlib --force"
+            },
+            "continueOnError": false
+        }, {
+            "description": "install FAKE templates",
+            "manualInstructions": [{
+                "text": "Run 'dotnet new -i  \"fake-template::*\"'"
+            }],
+            "actionId": "3A7C4B45-1F5D-4A30-959A-51B88E82B5D2",
+            "args": {
+                "executable": "dotnet",
+                "args": "new -i \"fake-template::*\""
+            },
+            "continueOnError": false
+        },
+        {
+            "description": "install FAKE",
+            "manualInstructions": [{
+                "text": "Run 'dotnet new fake'"
+            }],
+            "actionId": "3A7C4B45-1F5D-4A30-959A-51B88E82B5D2",
+            "args": {
+                "executable": "dotnet",
+                "args": "new fake"
+            },
+            "continueOnError": false
+        },
+        {
+            "description": "install paket",
+            "manualInstructions": [{
+                "text": "Run 'dotnet tool install paket'"
+            }],
+            "actionId": "3A7C4B45-1F5D-4A30-959A-51B88E82B5D2",
+            "args": {
+                "executable": "dotnet",
+                "args": "tool install paket"
+            },
+            "continueOnError": false
+        }
+    ]
 }

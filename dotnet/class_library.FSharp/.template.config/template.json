@@ -1,36 +1,18 @@
 {
     "$schema": "http://json.schemastore.org/template",
-    "author": "zericco",
-    "classifications": ["Test/NUnit"],
-    "identity": "Zericco.UnitTestTemplate.CSharp",
-    "name": "Zericco Unit Test Class Library",
-    "shortName": "zericcoutlib",
+    "author": "WiredSharp",
+    "classifications": ["Class Library"],
+    "identity": "WiredSharp.LibraryTemplate.FSharp",
+    "groupIdentity": "WiredSharp.LibraryTemplate",
+    "name": "WiredSharp Class Library",
+    "shortName": "wiredclasslib",
     "sourceName": "z-project",
+    "preferNameDirectory": true,
     "tags": {
-        "language": "C#",
+        "language": "F#",
         "type": "project"
     },
     "symbols": {
-        "Author": {
-            "type": "parameter",
-            "defaultValue": "<you>",
-            "replaces": "$Author"
-        },
-        "Company": {
-            "type": "parameter",
-            "defaultValue": "<your company>",
-            "replaces": "$Company"
-        },
-        "ArtifactFolder": {
-            "type": "parameter",
-            "defaultValue": "artifacts",
-            "replaces": "$ArtifactFolder"
-        },
-        "IntermediateFolder": {
-            "type": "parameter",
-            "defaultValue": "artifacts/obj",
-            "replaces": "$IntermediateFolder"
-        },
         "TargetFrameworkOverride": {
             "type": "parameter",
             "description": "Overrides the target framework",
@@ -123,8 +105,8 @@
                     "description": "Target net48"
                 }
             ],
-            "replaces": "netcoreapp2.2",
-            "defaultValue": "netcoreapp2.2"
+            "replaces": "netstandard2.0",
+            "defaultValue": "netstandard2.0"
         }
     }
 }

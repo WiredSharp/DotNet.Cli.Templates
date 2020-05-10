@@ -3,9 +3,9 @@
   <PropertyGroup>
     <PackageType>Template</PackageType>
     <PackageVersion>$(VersionSuffix)</PackageVersion>
-    <PackageId>Zericco.Templates</PackageId>
-    <Title>Zericco Templates</Title>
-    <Authors>Zericco</Authors>
+    <PackageId>WiredSharp.Templates</PackageId>
+    <Title>WiredSharp Templates</Title>
+    <Authors>WiredSharp</Authors>
     <Description>Useful templates for dotnet applications.</Description>
     <Tags>dotnet-new;templates</Tags>
     <TargetFramework>netstandard2.0</TargetFramework>
@@ -16,7 +16,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="dotnet\**\*" Exclude="dotnet\**\bin\**;dotnet\**\obj\**" />
+    <!-- solution pack is currently disabled as dotnet new commands cannot be run concurrently so th epost actions failed, solution is to use DotnetCli.Tools scripts-->
+    <Content Include="dotnet\**\*" Exclude="dotnet\**\bin\**;dotnet\**\obj\**;dotnet\solution_pack\**" />
     <Compile Remove="**\*" />
   </ItemGroup>
 

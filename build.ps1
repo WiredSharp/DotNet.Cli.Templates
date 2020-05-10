@@ -3,14 +3,14 @@ Param(
     # build semantic version major field
     [Parameter()][string]$Major = "1"
     # build semantic version minor field
-    ,[Parameter()][string]$Minor = "0"
+    , [Parameter()][string]$Minor = "1"
     # build semantic version patch field
-    ,[Parameter()][string]$Patch = "0"
+    , [Parameter()][string]$Patch = "0"
     # build configuration
-    ,[Parameter()][string]$Configuration = "Release"
-    )
+    , [Parameter()][string]$Configuration = "Release"
+)
 
 $version = "${Major}.${Minor}.${Patch}"
 
 dotnet pack -c $Configuration --version-suffix $version
-dotnet new -i "bin\${Configuration}\Zericco.Templates.${version}.nupkg"
+dotnet new -i "bin\${Configuration}\WiredSharp.Templates.${version}.nupkg"
