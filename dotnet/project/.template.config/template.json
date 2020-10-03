@@ -1,10 +1,10 @@
 {
     "$schema": "http://json.schemastore.org/template",
     "author": "WiredSharp",
-    "classifications": ["Project"],
+    "classifications": ["Solution"],
     "identity": "WiredSharp.ProjectSkeleton",
     "name": "WiredSharp Project Skeleton",
-    "shortName": "wiredprj",
+    "shortName": "wiredskel",
     "sourceName": "z-project",
     "preferNameDirectory": true,
     "tags": {

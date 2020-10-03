@@ -1,3 +1,6 @@
 $IntermediateFolder
 bin/
 obj/
+
+.fake
+.ionide
