@@ -1,10 +1,11 @@
 [CmdletBinding(SupportsShouldProcess)]
 Param(
-    # build semantic version major field
+    # build semantic version
     [Parameter()][string]$Version
-    # build semantic version minor field
     # build configuration
     , [Parameter()][string]$Configuration = "Release"
+    # install package
+    , [Parameter()][Switch]$InstallPackage
 )
 
 Set-StrictMode -Version Latest
@@ -70,8 +71,12 @@ if (-not $Version) {
 }
 
 if ($Version) {
-    dotnet pack -c $Configuration --version-suffix $Version
-    # dotnet new -i "${targetFolder}\${packageName}.${Version}.nupkg"
+    if ($PSCmdlet.ShouldProcess($packageName, "pack module")) {
+        dotnet pack -c $Configuration --version-suffix $Version
+    }
+    if ($PSCmdlet.ShouldProcess($packageName, "install package")) {
+        dotnet new -i "${targetFolder}\${packageName}.${Version}.nupkg"
+    }
     Write-Information "package ${packageName} v${Version} installed"
 }
 
